@@ -1,5 +1,4 @@
 .header{
-    background-color: aquamarine;
     text-align: center;
 }
 
@@ -10,7 +9,6 @@
 
 #playbtnDiv{
     text-align: center;
-    background-color: green;
     height: 10vw;
 }
 
@@ -25,13 +23,24 @@
 .LetterBoxContainer {
     box-shadow: inset 0vw 0vw 0vw 0.1vw black ;
     text-align: center;
-    margin: 2vw ;
+    margin: 0.5vw ;
     flex: 1;
+    display: none;
    
 
 }
 .gameBoxes {
     display: flex;
+}
+
+.FormDiv {
+    display: inline;
+}
+
+#userGuessForm {
+    text-align: center;
+    font-size: 2vw;
+    
 }
 
 /* #S1L1Letter {
