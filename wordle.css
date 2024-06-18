@@ -1,0 +1,39 @@
+.header{
+    background-color: aquamarine;
+    text-align: center;
+}
+
+#wordlelogo{
+    height: 10vw;
+    width: auto;
+}
+
+#playbtnDiv{
+    text-align: center;
+    background-color: green;
+    height: 10vw;
+}
+
+#btnPlay{
+    text-align: center;
+    top: 25%;
+    position: relative;
+    height: 5vw;
+    width: 10vw;
+}
+
+.LetterBoxContainer {
+    box-shadow: inset 0vw 0vw 0vw 0.1vw black ;
+    text-align: center;
+    margin: 2vw ;
+    flex: 1;
+   
+
+}
+.gameBoxes {
+    display: flex;
+}
+
+/* #S1L1Letter {
+    background-color: green;
+} */
