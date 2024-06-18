@@ -2,9 +2,15 @@
     text-align: center;
 }
 
+body{
+    background-color:  whitesmoke;
+}
+
 #wordlelogo{
     height: 10vw;
     width: auto;
+    margin: 0.5vw;
+    border: 0.2vw solid black ;
 }
 
 #playbtnDiv{
@@ -31,10 +37,6 @@
 }
 .gameBoxes {
     display: flex;
-}
-
-.FormDiv {
-    display: inline;
 }
 
 #userGuessForm {
