@@ -12,7 +12,9 @@ This document outlines the design system for the project
 -** Tertiary  Colour:** Black
 
 ## Components
+![Component](/docs/assets/design_system/Wordle_component1.jpg)
 
+![Component](/docs/assets/design_system/Wordle_component2.jpg)`
 ### Header
 
 ### Footer
