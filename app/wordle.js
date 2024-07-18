@@ -3,7 +3,6 @@ Jamie Bly
 Javascript File for Wordle by Jamie
 CSI3140 Assignment 2
 */
-myWord = "green";
 
 let guessNum = 0;
 let numOfLocks = 5;
@@ -15,7 +14,9 @@ let numOfLocks = 5;
 
 // }
 
+
 function userMakesGuess(form){  
+    window.alert(myWord);
     let guess = form.userGuess.value.toString();
     const splitGuess = guess.toLowerCase().split("");
     if(guess.length == 5){
