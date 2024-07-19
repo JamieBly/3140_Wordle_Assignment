@@ -1,0 +1,66 @@
+.header{
+    text-align: center;
+}
+
+body{
+    background-color:  whitesmoke;
+}
+
+#wordlelogo{
+    height: 10vw;
+    width: auto;
+    margin: 0.5vw;
+    border: 0.2vw solid black ;
+}
+
+#playbtnDiv{
+    text-align: center;
+    height: 10vw;
+}
+
+#btnPlay{
+    text-align: center;
+    top: 25%;
+    position: relative;
+    height: 5vw;
+    width: 10vw;
+}
+
+.LetterBoxContainer {
+    box-shadow: inset 0vw 0vw 0vw 0.1vw black ;
+    text-align: center;
+    margin: 0.5vw ;
+    flex: 1;
+    display: none;
+   
+
+}
+
+.stats {
+    text-align: center;
+}
+.gameBoxes {
+    display: flex;
+}
+
+#userGuessForm {
+    text-align: center;
+    font-size: 2vw;
+    
+}
+
+h3 {
+    font-family: Verdana, sans-serif;
+    width:auto;
+    font-size: 2vw;
+}
+
+h2 {
+    font-family: Verdana, sans-serif;
+    font-size: 2vw;
+    width:auto;
+}
+
+/* #S1L1Letter {
+    background-color: green;
+} */
