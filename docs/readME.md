@@ -16,3 +16,6 @@ I had difficulties with PHP/AJAX, and am handing what I have, which is essential
 # My Design System
 This repository documents the design system for my Wordle website.
 [Design System](docs/design_system.md)
+[Database Design](/docs/db.md)
+[Database Schema](/db/schema.sql)
+[Sample Data (SQL)](/db/seed.sql)
