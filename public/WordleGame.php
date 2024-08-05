@@ -75,13 +75,15 @@
         $dbconnectUsers = pg_connect($connectionUsers);
         $current_username = $_SESSION["username"];
             
-        $query = "SELECT numgamesplayed FROM users WHERE username = '$current_username';";
+        $query = "SELECT numgamesplayed FROM users WHERE username='$current_username'";
         $res = pg_query($dbconnectUsers, $query);
-    
-        foreach ($res as $x){
-            $num_games_play_query = "UPDATE users SET numgamesplayed = 1 WHERE username = '$current_username';";
-            pg_query($dbconnectUsers, $num_games_play_query);
-        }    
+        $row = pg_fetch_row($res);
+        $x=$row[0] +1;
+        
+            
+        $num_games_play_query = "UPDATE users SET numgamesplayed='$x' WHERE username='$current_username'";
+        pg_query($dbconnectUsers, $num_games_play_query);
+            
     }
 
     function runNumOfGamesWon(){
@@ -90,15 +92,14 @@
         $dbconnectUsers = pg_connect($connectionUsers);
         $current_username = $_SESSION["username"];
             
-        $query = 'select numgameswon from users where user== $_SESSION["username"]';
+        $query = "SELECT numgameswon FROM users WHERE username = '$current_username'";
         $res = pg_query($dbconnectUsers, $query);
-    
-        foreach ($res as $x){
-            if ($x == $_SESSION["username"]){
-                $games_won_query = 'UPDATE users SET numgameswon = $res++ WHERE user == $_SESSION["username"]';
-                pg_query($dbconnectUsers, $games_won_query);
-            }  
-        }    
+        $row = pg_fetch_row($res);
+        $x=$row[0] +1;
+ 
+        $games_won_query = "UPDATE users SET numgameswon='$x' WHERE user='$current_username'";
+        pg_query($dbconnectUsers, $games_won_query);
+        
     }
     
     function runTotalNumGuesses(){
@@ -107,15 +108,15 @@
         $dbconnectUsers = pg_connect($connectionUsers);
         $current_username = $_SESSION["username"];
             
-        $query = 'select totalnumguesses from users where user== $_SESSION["username"]';
+        $query = "SELECT totalnumguesses from users where user='$current_username'";
         $res = pg_query($dbconnectUsers, $query);
+        $row = pg_fetch_row($res);
+        $x=$row[0] +1;
     
-        foreach ($res as $x){
-            if ($x == $_SESSION["username"]){
-                $total_num_guesses_query = 'UPDATE users SET totalnumguesses = $res++ WHERE user == $_SESSION["username"]';
-                pg_query($dbconnectUsers, $total_num_guesses_query);
-            }  
-        }    
+       
+        $total_num_guesses_query = "UPDATE users SET totalnumguesses='$x'WHERE user='$current_username'";
+        pg_query($dbconnectUsers, $total_num_guesses_query);
+           
     }
 
 
