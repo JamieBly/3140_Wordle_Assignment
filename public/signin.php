@@ -56,7 +56,7 @@ if(isset($_POST['verify']) && $_POST['verify']=="Verify"){
                 <form action="<?php echo $_SERVER['PHP_SELF']?>" method="post">
                     <label for="userSignin">Username:</label>
                     <input type="text" name="user"><br><br>
-                    <label for="userSignin">Password: <?php echo $_SESSION['userSignedIn'];?></label>
+                    <label for="userSignin">Password:</label>
                     <input type="password" name="password"><br><br>
                     <input type="submit" value="Verify" name="verify">
                     
