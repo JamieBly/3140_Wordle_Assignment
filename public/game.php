@@ -167,19 +167,7 @@
                         guessNum++;
                         <?php incrementGuesses(); ?>;
                         document.getElementById('guessNum').value = guessNum;
-                        
-                            // $.ajax({
-                            //     type: 'POST',
-                            //     url: 'index.php',
-                            //     data: { guessNum: guessNum },
-                            //     success: function(response) {
-                            //         console.log('Success:', response);
-                            //     },
-                            //     error: function(error) {
-                            //         console.error('Error:', error);
-                            //     }
-                            // });
-                                      
+                          
                         const splitWord = myWord.toLowerCase().split("");
                         
                         locksReset(); //resets the locks before each attempt

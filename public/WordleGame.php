@@ -86,6 +86,17 @@
             
     }
 
+    function getGamesPlayed(){
+        $connectionUsers = "host=localhost dbname=users user=postgres password=Sidney8790!";
+        $dbconnectUsers = pg_connect($connectionUsers);
+        $current_username = $_SESSION["username"];
+
+        $query = "SELECT numgamesplayed FROM users WHERE username='$current_username'";
+        $res = pg_query($dbconnectUsers, $query);
+        $row = pg_fetch_row($res);
+        return $row[0];
+    }
+
     function runNumOfGamesWon(){
 
         $connectionUsers = "host=localhost dbname=users user=postgres password=Sidney8790!";
@@ -97,9 +108,19 @@
         $row = pg_fetch_row($res);
         $x=$row[0] +1;
  
-        $games_won_query = "UPDATE users SET numgameswon='$x' WHERE user='$current_username'";
+        $games_won_query = "UPDATE users SET numgameswon='$x' WHERE username='$current_username'";
         pg_query($dbconnectUsers, $games_won_query);
         
+    }
+
+    function getGamesWon(){
+        $connectionUsers = "host=localhost dbname=users user=postgres password=Sidney8790!";
+        $dbconnectUsers = pg_connect($connectionUsers);
+        $current_username = $_SESSION["username"];
+        $query = "SELECT numgameswon FROM users WHERE username = '$current_username'";
+        $res = pg_query($dbconnectUsers, $query);
+        $row = pg_fetch_row($res);
+        return $row[0];
     }
     
     function runTotalNumGuesses(){
@@ -108,15 +129,26 @@
         $dbconnectUsers = pg_connect($connectionUsers);
         $current_username = $_SESSION["username"];
             
-        $query = "SELECT totalnumguesses from users where user='$current_username'";
+        $query = "SELECT totalnumguesses from users where username='$current_username'";
         $res = pg_query($dbconnectUsers, $query);
         $row = pg_fetch_row($res);
         $x=$row[0] +1;
     
        
-        $total_num_guesses_query = "UPDATE users SET totalnumguesses='$x'WHERE user='$current_username'";
+        $total_num_guesses_query = "UPDATE users SET totalnumguesses='$x'WHERE username='$current_username'";
         pg_query($dbconnectUsers, $total_num_guesses_query);
            
+    }
+
+    function getNumGuesses(){
+        $connectionUsers = "host=localhost dbname=users user=postgres password=Sidney8790!";
+        $dbconnectUsers = pg_connect($connectionUsers);
+        $current_username = $_SESSION["username"];
+
+        $query = "SELECT totalnumguesses from users where username = '$current_username'";
+        $res = pg_query($dbconnectUsers, $query);
+        $row = pg_fetch_row($res);
+        return $row[0];
     }
 
 
