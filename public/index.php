@@ -27,15 +27,23 @@
 
         <div id="playbtnDiv">
             <a href="game.php">
-                <button id="btnPlay" >PLAY WORDLE</button>
+                <button id="btnPlay">PLAY WORDLE</button>
             </a>
         </div>
 
         <div class="stats">
+            <h3>Welcome <?php echo $_SESSION['username'];?> to Wordle by Jamie!</h3><br>
+            <h3>Your Stats:</h3>
             <h3>Number of games played this session: <h2 id="gamesPlayed"><?php echo $_SESSION["numOfGames"];?></h2></h3>
             <h3>Number of games won this session: <h2 id="gamesWon"><?php echo $_SESSION["numOfGamesWon"];?></h2></h3>
             <h3>Number of guess made this session: <h2 id="numGuesses"><?php echo $_SESSION["numOfGuesses"];?></h2></h3>
             <h3>Average guesses per game this session: <h2 id="avgGuesses"><?php echo $_SESSION["avgNumOfGuesses"];?></h2></h3>
+        </div>
+
+        <div id="signinBtnDiv">
+            <a href="index.php?gate=true">
+                <button id="btnPlay">Sign Out</button>
+            </a>
         </div>
 
     </body>

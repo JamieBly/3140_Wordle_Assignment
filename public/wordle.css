@@ -13,7 +13,7 @@ body{
     border: 0.2vw solid black ;
 }
 
-#playbtnDiv{
+#playbtnDiv, #signinBtnDiv{
     text-align: center;
     height: 10vw;
 }

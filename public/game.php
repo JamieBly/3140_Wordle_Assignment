@@ -1,5 +1,6 @@
 <?php
     require("WordleGame.php");
+    incrementGames();
 ?>
 
 <!DOCTYPE html>
@@ -149,23 +150,11 @@
                 let dataToSend = "index.php/guess="+guessNum;
                 const xmlhttp = new XMLHttpRequest();
 
-                // xmlhttp.onreadystatechange = function() {
-                //     if (xmlhttp.readyState == XMLHttpRequest.DONE) {
-                //     if (xmlhttp.status == 200) {
-                //         die1.innerHTML = xmlhttp.responseText;
-                //     }
-                //     }
-                // };
-
                 xmlhttp.open("POST", dataToSend, true);
                 xmlhttp.send(dataToSend);
             }
 
             function userMakesGuess(form){  
-
-                <?php 
-                    incrementGames();
-                ?>;
 
                 let guess = form.userGuess.value.toString();
                 const splitGuess = guess.toLowerCase().split("");
